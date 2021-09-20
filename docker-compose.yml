@@ -28,5 +28,15 @@ services:
         - "9010:8080"
       volumes:
         - jenkins_data/:/var/jenkins_home
+    sonarqueb:
+      container_name: sonarqube
+      image: sonarqube
+      user: root
+      ports:
+        - "9011:9000"
+      volumes:
+        - sonar_data/:/opt/sonarqube/data
+
 volumes:
   jenkins_data:
+  sonar_data:

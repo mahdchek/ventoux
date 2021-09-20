@@ -12,6 +12,10 @@ node('amazon') {
         sh "cd front && npm install && ng build --prod"
     }
 
+    stage ("sonarqube"){
+
+    }
+
     try{
         sh "docker-compose down"
     }catch(Exception e){
