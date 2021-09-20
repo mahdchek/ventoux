@@ -19,6 +19,6 @@ node('amazon') {
     }
 
     stage ('Deploy application'){
-        sh "sudo docker-compose up -d"
+        sh "sudo docker-compose up --build -d"
     }
 }
