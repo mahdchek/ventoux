@@ -10,7 +10,7 @@ public class VentouxController {
     private AppInformations getInformations(){
         return AppInformations.builder()
                 .appName("Ventoux")
-                .version("1.0.0")
+                .version("1.0.1")
                 .build();
     }
 
