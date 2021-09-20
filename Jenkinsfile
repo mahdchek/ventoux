@@ -12,7 +12,13 @@ node('amazon') {
         sh "cd front && npm install && ng build --prod"
     }
 
+    try{
+        sh "docker-compose down"
+    }catch(Exception e){
+        println "aucun conteneur n'est lancé"
+    }
+
     stage ('Deploy application'){
-        sh "docker-compose up -d"
+        sh "sudo docker-compose up -d"
     }
 }
