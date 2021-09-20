@@ -11,4 +11,8 @@ node('amazon') {
     stage ("build front end") {
         sh "cd front && npm install && ng build --prod"
     }
+
+    stage ('Deploy application'){
+        sh "docker-compose up -d"
+    }
 }
