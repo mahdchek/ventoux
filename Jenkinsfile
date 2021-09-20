@@ -4,6 +4,7 @@ node {
     }
 
     stage("build"){
+        sh "chmod 777 -R ./ventoux/mvnw"
         sh "cd ventoux && ./mvnw clean install -DskipTests"
     }
 }
