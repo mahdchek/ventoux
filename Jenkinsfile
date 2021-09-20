@@ -9,6 +9,6 @@ node('amazon') {
     }
 
     stage ("build front end") {
-        sh "cd front && ng build --prod"
+        sh "cd front && npm install && ng build --prod"
     }
 }
