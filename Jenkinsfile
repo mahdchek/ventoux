@@ -4,6 +4,6 @@ node {
     }
 
     stage("build"){
-        sh "cd ventoux && mvnw clean install -DskipTests"
+        sh "cd ventoux && ./mvnw clean install -DskipTests"
     }
 }
